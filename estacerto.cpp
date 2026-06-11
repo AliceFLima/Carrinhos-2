@@ -42,21 +42,28 @@ void setup() {
 void autonoma_direita() {
   Serial.println("Saindo da base");
   direita();   
-  if (pausa(90)) return;
+  if (pausa(150)) return;
   frente();   
   if (pausa(4000)) return;
   esquerda();    
-  if (pausa(1200)) return; 
+  if (pausa(2100)) return; 
   frente();     
-  if (pausa(300)) return; 
+  if (pausa(1600)) return; 
   direita();   
-  if (pausa(2000)) return; 
+  if (pausa(2700)) return; 
   frente();
-  if (pausa(1300)) return; 
-  parar();   
-  if (pausa(700)) return;  
+  if (pausa(3100)) return; 
+  parar();
   chutar();
-  Serial.println("Fim da fase autonoma"); ///acaba a fase autonoma idependente de ter feito gol
+  if (pausa(500)) return; 
+  tras();   
+  if (pausa(1100)) return; 
+  direita();   
+  if (pausa(1800)) return; 
+  frente();   
+  if (pausa(4000)) return; 
+  parar();
+  Serial.println("Fim da fase autonoma");
 }
 
 void autonoma_esquerda() {
